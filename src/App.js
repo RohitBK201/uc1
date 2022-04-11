@@ -8,7 +8,10 @@ function App() {
   const handlescore = (value) =>
   {
 
-    setScore(value+score)
+    if(score<101)
+    {
+      setScore(value+score)
+    }
 
   }
 
@@ -17,10 +20,13 @@ function App() {
 
   const handlewicket = (value) =>{
 
+   if(score<101)
+   {
     if(wicket<12)
     {
       setWicket(value+wicket)
     }
+   }
 
   }
 
@@ -30,7 +36,10 @@ function App() {
 
     
 
-      setballs(balls +value)
+      if(score<101)
+      {
+        setballs(balls +value)
+      }
 
   }
 
