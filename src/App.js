@@ -8,7 +8,7 @@ function App() {
   const handlescore = (value) =>
   {
 
-    if(score<101)
+    if(score<101&&wicket<12)
     {
       setScore(value+score)
     }
@@ -36,7 +36,7 @@ function App() {
 
     
 
-      if(score<101)
+      if(score<101&&wicket<12)
       {
         setballs(balls +value)
       }
@@ -74,7 +74,7 @@ function App() {
               // if 1 more ball is thrown then over is now 5.0
               // you have to write logic to form this string from current ball number.
               
-              balls/6
+              `${Math.floor(balls/6)}.${balls%6}`
             }
           </h1>
         </div>
